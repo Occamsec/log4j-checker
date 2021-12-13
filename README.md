@@ -10,7 +10,7 @@ NOTE: if the version of Log4j in use within your system has been modified to int
 
 ## Usage:
 
-### Bash (use sudo to avoid permission issues):
+### Bash (run with sudo to avoid permission issues):
 ```
 log4shell_hash_check.sh <path> <sha256file>
 
@@ -19,20 +19,19 @@ E.g.: sudo log4shell_hash_check.sh / sha256sum.txt
       sudo log4shell_hash_check.sh /opt/tomcat/ sha256sum.txt
 ```
 
-### Powershell (run from an administrator shell to avoid permission issues):
+### PowerShell (run from an administrator shell to avoid permission issues):
 ```
-log4shell_hash_check.ps1 <path> <sha256file>
+log4shell_hash_check.ps1 -path <path> -hashfile <sha256file>
 
-E.g.: log4shell_hash_check.ps1 c:\ sha256sum.txt
-      sudo log4shell_hash_check.ps1 .\ sha256sum.txt
-      sudo log4shell_hash_check.ps1 c:\opt\tomcat\ sha256sum.txt
+E.g.: .\log4shell_hash_check.ps1 -path c:\ -hashfile sha256sum.txt
+      .\log4shell_hash_check.ps1 -path .\ -hashfile sha256sum.txt
+      .\log4shell_hash_check.ps1 -path c:\opt\tomcat\ -hashfile sha256sum.txt
 ```
-
 
 ### Sample output:
 
 ```
-OccamSec$ ./log4shell_hash_check.sh ./ log4j_2.x_sha256sum.txt
+OccamSec $ ./log4shell_hash_check.sh ./ log4j_2.x_sha256sum.txt
 Please be patient, scanning the file system for .jar files starting at ./
 .//apache-log4j-2.13.1-bin/log4j-flume-ng-2.13.1.jar
 .//apache-log4j-2.13.1-bin/log4j-core-2.13.1.jar
