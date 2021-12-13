@@ -6,7 +6,7 @@ The script will calculate a SHA256 hash for each .jar file found - regardless of
 
 Known hash files are available from https://github.com/mubix/CVE-2021-44228-Log4Shell-Hashes
 
-NOTE: if the version of Log4j in use within your system has been modified, for instance to introduce customizations, its SHA256 hash will differ from the corresponding official release and the script will not be able to flag it.
+NOTE: if the Log4j .jar file in use within your system has been modified, for instance to introduce customizations, its SHA256 hash will differ from the corresponding official release and the script will not be able to flag it.
 
 ## Usage:
 
@@ -14,9 +14,9 @@ NOTE: if the version of Log4j in use within your system has been modified, for i
 ```
 log4shell_hash_check.sh <path> <sha256file>
 
-E.g.: sudo log4shell_hash_check.sh / sha256sum.txt
-      sudo log4shell_hash_check.sh ./ sha256sum.txt
-      sudo log4shell_hash_check.sh /opt/tomcat/ sha256sum.txt
+E.g.: sudo ./log4shell_hash_check.sh / sha256sum.txt
+      sudo ./log4shell_hash_check.sh ./ sha256sum.txt
+      sudo ./log4shell_hash_check.sh /opt/tomcat/ sha256sum.txt
 ```
 
 ### PowerShell (run from an administrator shell to avoid permission issues):
