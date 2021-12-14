@@ -1,12 +1,12 @@
 # Log4Shell checker
 
-This script scans a local filesystem looking for .jar files which may be vulnerable to CVE-2021-44228/Log4Shell.
+This script scans a local filesystem looking for .jar files which may be vulnerable to CVE-2021-44228 aka Log4Shell.
 
-The script will calculate a SHA256 hash for each .jar file found - regardless of the filename - and compare this value against known SHA256 hashes calculated against Log4j releases between 2.0 and 2.14.1 included.
+The script will calculate a SHA-256 hash for each .jar file found - regardless of the filename - and compare this value against known SHA-256 hashes calculated against Log4j releases between 2.0 and 2.14.1 included.
 
 Known hash files are available from https://github.com/mubix/CVE-2021-44228-Log4Shell-Hashes
 
-NOTE: if the Log4j .jar file in use within your system has been modified, for instance to introduce customizations, its SHA256 hash will differ from the corresponding official release and the script will not be able to flag it.
+NOTE: if the Log4j .jar file in use within your system has been modified, for instance to introduce customizations, its SHA-256 hash will differ from the corresponding official release and the script will not be able to flag it.
 
 ## Usage:
 
