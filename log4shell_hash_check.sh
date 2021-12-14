@@ -4,7 +4,7 @@
 # Released by OccamSec on 2021.12.13
 #
 # Finds every .jar file within the filesystem and compares
-# each one against known log4j 2.0-2.14.1 sha256 hashes
+# each one against known log4j 2.0-2.14.1 SHA-256 hashes
 #
 # Hash files available from
 # https://github.com/mubix/CVE-2021-44228-Log4Shell-Hashes
@@ -16,7 +16,7 @@
 if [[ $# -ne 2 ]]; then
   echo    "Log4shell hash ckecher"
   echo    "----------------------"
-  echo    "Scans the filesystem for .jar files and compare them against a list of known sha256 hashes."
+  echo    "Scans the filesystem for .jar files and compare them against a list of known SHA-256 hashes."
   echo    "NOTE: use 'sudo' if you do not have permissions to access the path you want to scan."
   echo    "Usage: sudo $0 <path> <sha256file>"
   echo    "E.g.: sudo $0 / sha256sum.txt"
@@ -55,18 +55,18 @@ else
   echo "Please be patient, scanning the file system for .jar files starting at ${1}"
   find "${1}" -name "*.jar" 2>&1 | grep -Eiv "(denied|permitted|no such file|not a directory)" | tee ./jarfiles.txt
 
-  # Prepend each possible hash to each jar file and run shasum against it
+  # For each jar file calculate its SHA-256 hash and compare it against the user-provided SHA-256 hash file
   IFS=$'\n' # Keep line elements together within the loop by ignoring any separator except '\n'  
   for jarfile in $(cat ./jarfiles.txt); do
 
-    # If the file is readable (we have permission) we calculate its sha256 hash
+    # If the file is readable (we have permission) we calculate its SHA-256 hash
     if [[ ! -r "${jarfile}" ]]; then
         echo -en "\033[2K\rCannot read ${jarfile}."
       else
         hash=$(shasum -a 256 -b "${jarfile}" | cut -f 1 -d ' ')        
         echo -en "\033[2K\rChecking hash ${hash}  ${jarfile}"
 
-        # Then we check if the file's hash is present in the sha256 hash file
+        # Then we check if the file's hash is present in the user-provided SHA-256 hash file
         match=$(grep ${hash} ${2})
         if [[ ! -z "${match}" ]]; then
           echo -en "\n   >>> MATCH: "
