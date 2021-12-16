@@ -4,7 +4,7 @@
 # Released by OccamSec on 2021.12.13
 #
 # Finds every .jar file within the filesystem and compares
-# each one against known log4j 2.0-2.14.1 SHA-256 hashes
+# each one against user-provided SHA-256 hashes
 #
 # Hash files available from
 # https://github.com/mubix/CVE-2021-44228-Log4Shell-Hashes
