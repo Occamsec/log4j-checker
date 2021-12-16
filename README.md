@@ -88,7 +88,7 @@ Please be patient, scanning the file system for .jar files starting at ./
 .//apache-log4j-2.13.1-bin/log4j-appserver-2.13.1-javadoc.jar
 .//apache-log4j-2.13.1-bin/log4j-appserver-2.13.1-sources.jar
 -------------------------------------------
->>> JndiLookup.class found in: .//apache-log4j-2.13.1-bin/apache-log4j-2.13.1-bin/log4j-core-2.13.1.jar
+>>> JndiLookup.class found in: .//apache-log4j-2.13.1-bin/log4j-core-2.13.1.jar
 
 PACKAGE INFORMATION:
 Automatic-Module-Name: org.apache.logging.log4j.core
@@ -106,7 +106,7 @@ Log4jReleaseVersion: 2.13.1
 Specification-Version: 2.13.1
 
 SHA-256 hash:
- 6f38a25482d82cd118c4255f25b9d78d96821d22bab498cdce9cda7a563ca992 *.//apache-log4j-2.13.1-bin/apache-log4j-2.13.1-bin/log4j-core-2.13.1.jar
+ 6f38a25482d82cd118c4255f25b9d78d96821d22bab498cdce9cda7a563ca992 *.//apache-log4j-2.13.1-bin/log4j-core-2.13.1.jar
 
 List of .jar files found under ./ (if any) saved as ./jarfiles.txt
 Details about .jar files containing 'JndiLookup.class' (if any) saved as ./jndilookup_jarfiles.txt
