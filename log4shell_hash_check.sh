@@ -16,7 +16,7 @@
 if [[ $# -ne 2 ]]; then
   echo    "Log4shell hash ckecher"
   echo    "----------------------"
-  echo    "Scans the filesystem for .jar files and compare them against a list of known SHA-256 hashes."
+  echo    "Scans the filesystem for .jar files and compare them against a list of user-provided SHA-256 hashes."
   echo    "NOTE: use 'sudo' if you do not have permissions to access the path you want to scan."
   echo    "Usage: sudo $0 <path> <sha256file>"
   echo    "E.g.: sudo $0 / sha256sum.txt"
@@ -74,7 +74,8 @@ else
         fi
     fi
   done
-  echo -e "\nJar files found under ${1} (if any) saved as ./jarfiles.txt"
-  echo "Matching log4j jars (if any) saved as ./matchinglog4j.txt"
+
+  echo -e "\nList of .jar files found under ${1} (if any) saved as ./jarfiles.txt"
+  echo "List of .jar files matching user-provided Log4j hashes (if any) saved as ./matchinglog4j.txt"
 
 fi
