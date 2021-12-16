@@ -77,7 +77,7 @@ E.g.: .\log4shell_jndilookup_finder.ps1 -path c:\
 
 ##### Sample output:
 ```
-$ ./log4shell_jndilookup_finder.sh ./
+OccamSec $ ./log4shell_jndilookup_finder.sh ./
 Please be patient, scanning the file system for .jar files starting at ./
 .//apache-log4j-2.13.1-bin/log4j-flume-ng-2.13.1.jar
 .//apache-log4j-2.13.1-bin/log4j-core-2.13.1.jar
