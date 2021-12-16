@@ -6,7 +6,7 @@
 # Finds every .jar file within the filesystem and compares
 # each one against user-provided SHA-256 hashes
 #
-# Hash files available from
+# Sample Log4j hash files available from
 # https://github.com/mubix/CVE-2021-44228-Log4Shell-Hashes
 # 
 # This script is meant to be readable and understandable,
