@@ -2,9 +2,9 @@
 # Released by OccamSec on 2021.12.13
 #
 # Finds every .jar file within the filesystem and compares
-# each one against known log4j 2.0-2.14.1 SHA-256 hashes
+# each one against user-provided SHA-256 hashes
 #
-# Hash files available from
+# Sample Log4j hash files available from
 # https://github.com/mubix/CVE-2021-44228-Log4Shell-Hashes
 # 
 # This script is meant to be readable and understandable,
@@ -48,7 +48,9 @@ If (($hashfile -eq $null) -or ($path -eq $null)) {
 
 		}
 	}
-	Write-Host "Done"
+	Write-Host "`nList of .jar files found under $($path) (if any) saved as ./jarfiles.txt"
+	Write-Host "List of .jar files matching user-provided Log4j hashes (if any) saved as ./matchinglog4j.txt"
+    
 
 	# Close the log
 	# Stop-Transcript
