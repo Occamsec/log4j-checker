@@ -47,8 +47,8 @@ Checking hash 6f38a25482d82cd118c4255f25b9d78d96821d22bab498cdce9cda7a563ca992  
 
 Checking hash eafab7995f042e0386e08fa5e299d63465b63f1e4e5cb754612c68d52b72516d  .//apache-log4j-2.13.1-bin/log4j-appserver-2.13.1-sources.jar
 
-Jar files found under ./ (if any) saved as ./jarfiles.txt
-Matching log4j jars (if any) saved as ./matchinglog4j.txt
+List of .jar files found under ./ (if any) saved as ./jarfiles.txt
+List of .jar files matching user-provided Log4j hashes (if any) saved as ./matchinglog4j.txt
 ```
 
 ## Log4Shell JndiLookup Finder
